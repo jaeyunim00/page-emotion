@@ -1,0 +1,34 @@
+<!-- sentiment_analysis/templates/comments.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <title>YouTube Comments</title>
+  </head>
+  <body>
+    <header>
+      <h1>페이지의 감정</h1>
+    </header>
+    <main>
+      <h1>분석 결과</h1>
+      <p>Total Comments: {{ sentiment_result.total_comments }}</p>
+      <p>Positive Comments: {{ sentiment_result.positive_count }}</p>
+      <p>Positive Ratio: {{ sentiment_result.positive_percentage }}%</p>
+      <p>Negative Comments: {{ sentiment_result.negative_count }}</p>
+      <p>Negative Ratio: {{ sentiment_result.negative_percentage }}%</p>
+      <p>Normal Comments: {{ sentiment_result.normal_count }}</p>
+      <p>Normal Ratio: {{ sentiment_result.normal_percentage }}%</p>
+    </main>
+    <main>
+      <h1>분석 데이터</h1>
+      <ul>
+        {% for comment in comments %}
+        <li>{{ comment }}</li>
+        {% endfor %}
+      </ul>
+    </main>
+  </body>
+</html>

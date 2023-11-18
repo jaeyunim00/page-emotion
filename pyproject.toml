@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "page-emotion"
+version = "0.1.0"
+description = ""
+authors = ["jaeyunim00 <71920791+jaeyunim00@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "page_emotion"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.7"
+textblob = "^0.17.1"
+beautifulsoup4 = "^4.12.2"
+selenium = "^4.15.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

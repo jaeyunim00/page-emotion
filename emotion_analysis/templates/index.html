@@ -1,0 +1,24 @@
+<!-- sentiment_analysis/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <title>YouTube Comment Analysis</title>
+  </head>
+  <body>
+    <header>
+      <h1>페이지의 감정</h1>
+    </header>
+    <main>
+      <form method="post" action="{% url 'get_comments' %}">
+        {% csrf_token %}
+        <label for="video_url">주소를 입력하세요</label>
+        <input type="text" name="video_url" required />
+        <button type="submit">페이지 분석하기</button>
+      </form>
+    </main>
+  </body>
+</html>
